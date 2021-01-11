@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav>
+
+        <h4>Nodejs Login System</h4>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+        </ul>
+    </nav>
+
+    <div class="container mt-4">
+           <div class="card">
+               <div class="card-header">
+                   Register Form
+               </div>
+               <div class="card-body">
+                    <form action="/auth/register" method="POST"> 
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="passwordConfirm" class="form-label">Password Confrim</label>
+                        <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                   
+               </div>
+           </div>
+
+           {{#if message }}
+            <h4 class="alert alert-danger mt-4"> {{message}} </h4>
+           {{/if}}
+    </div>
+
+<script src="/bootstrap.js"></script>
+</body>
+</html>
